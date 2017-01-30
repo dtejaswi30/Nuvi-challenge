@@ -1,0 +1,103 @@
+/* app css stylesheet */
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+.menu:before {
+    content: "[";
+}
+.menu:after {
+    content: "]";
+}
+.menu > li {
+    display: inline;
+}
+.menu > li + li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+.nuvi-header {
+    padding: 20px 20px 20px 20px;
+    margin: 10px 10px 10px 10px;
+    background-color: #337ab7;
+    border: 2px #337ab7;
+    border-style: outset;
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}
+.activities-content {
+    margin: 10px 10px 10px 10px;
+}
+.actor-name {
+    color: #365899;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.actor-post {
+    color: #365899;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.post-likes {
+    margin-left: 5px;
+    margin-top: 3px;
+}
+a {
+    text-decoration: none;
+}
+.post-content {
+    padding: 5px;
+    overflow: hidden;
+}
+.post-content img {
+    margin-right: 5px;
+    float: left;
+    border: 1px #337ab7;
+    border-style: outset;
+}
+.summary-div {
+    border: 2px #337ab7;
+    border-style: outset;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+.box {
+    padding: 0 5px 0 5px;
+    text-align: center;
+}
+.box .inner {
+    background-color: #337ab7;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.site-name {
+    margin-right: 10px;
+}
+.social-icon
+{
+    font-size:3em;
+}
+.box-facebook
+{
+    background-color:#3b5998;
+}
+.box-tumblr
+{
+    background-color:#35465c;
+}
+.box-instagram
+{
+    background-color:#cd486b;
+}
+.box-twitter
+{
+    background-color:#4099ff;
+}
+

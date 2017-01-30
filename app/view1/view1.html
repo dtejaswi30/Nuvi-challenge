@@ -1,0 +1,44 @@
+<div ng-controller="View1Ctrl as viewCtrl">
+  <div class="nuvi-header">
+    <span>Nuvi Code Challenge </span>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-lg-3 box" ng-repeat="(key, val) in viewCtrl.counts">
+        <div class="box-{{key}} summary-div">
+            <span class="social-icon"><span class="fa fa-{{key}} "> </span></span>
+          <span class="site-name">{{key}}</span><span>{{val}} posts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  Search <input ng-model="searchText" type="text">
+  <div  class="activities-content">
+    <div style="width: 50%;margin-left:25%">
+      <table ng-table="viewCtrl.defaultConfigTableParams" class="table table-condensed table-bordered table-striped">
+        <tr ng-repeat="row in $data| filter:searchText">
+          <td>
+            <div class="post-content">
+              <img src="{{row.actor_avator}}" height="60" weight="60" alt="no Image">
+              <span class="actor-name" ><a href="{{row.actor_url}}"> {{row.actor_username}}</a></span><br/>
+              <p class="actor-post"><a href="{{row.activity_url}}">See Post on {{row.provider}}</a></p>
+            </div>
+            <div class="post-likes actor-post">
+              <span>{{row.activity_likes}} likes</span>
+              <span>{{row.activity_shares}} shares</span>
+              <span>{{row.activity_comments}} comments</span>
+            </div>
+            <div>
+              <button ng-click="viewCtrl.addLike(row.id)" type="button" class="btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-thumbs-up"></span> Like
+              </button>      
+              <button ng-click="viewCtrl.addComment(row.id)" type="button" class="btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-comment"></span> Comment
+              </button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
